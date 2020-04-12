@@ -345,8 +345,8 @@ public class EbeanQueryChannelService implements QueryChannelService {
     public static <T> Query<T> queryWithPage(ExpressionList<T> expressionList, Pageable pageable) {
         Assert.notNull(expressionList, "expressionList must not null");
         Assert.notNull(pageable, "pageable must not null");
-        return expressionList.setMaxRows(pageable.getPageSize())
-                .setFirstRow((int) pageable.getOffset())
+        return expressionList.setMaxRows(pageable.getPageSize()).setFirstRow((int) pageable.getOffset())
+                .query()
                 .setOrder(Converters.convertToEbeanOrderBy(pageable.getSort()));
     }
 
@@ -375,6 +375,7 @@ public class EbeanQueryChannelService implements QueryChannelService {
         if (pageable != null) {
             expressionList.setMaxRows(pageable.getPageSize())
                     .setFirstRow((int) pageable.getOffset())
+                    .query()
                     .setOrder(Converters.convertToEbeanOrderBy(pageable.getSort()));
         }
         return expressionList.query();

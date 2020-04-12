@@ -45,10 +45,10 @@
         <ebean-maven-plugin.args>debug=0</ebean-maven-plugin.args>
         <bundlor.enabled>false</bundlor.enabled>
         <bundlor.failOnWarnings>false</bundlor.failOnWarnings>
-        <spring>5.1.2.RELEASE</spring>
-        <springdata.commons>2.1.2.RELEASE</springdata.commons>
-        <ebean.version>11.21.1</ebean.version>
-        <ebean-spring-txn.version>11.10.4</ebean-spring-txn.version>
+        <spring>5.2.5.RELEASE</spring>
+        <springdata.commons>2.2.6.RELEASE</springdata.commons>
+        <ebean.version>12.2.3</ebean.version>
+        <ebean-spring-txn.version>12.2.1</ebean-spring-txn.version>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     </properties>
 

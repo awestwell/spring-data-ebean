@@ -120,7 +120,6 @@ public abstract class AbstractEntity implements Persistable<Long>, Auditable<Str
         this.id = id;
     }
 
-    @Transient
     @Override
     public boolean isNew() {
         return null == getId();
